@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class App extends StatefulWidget {
+  @override
   createState() {
     return AppState();
   }
@@ -9,6 +10,9 @@ class App extends StatefulWidget {
 class AppState extends State<App> {
   int counter = 0;
 
+  void fetchImage() {}
+
+  @override
   Widget build(context) {
     return MaterialApp(
       home: Scaffold(
@@ -16,11 +20,7 @@ class AppState extends State<App> {
           title: Text('Lets get some images!'),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            setState(() {
-              counter++;
-            });
-          },
+          onPressed: fetchImage,
           child: Icon(
             Icons.add,
           ),
